@@ -1,4 +1,7 @@
-﻿namespace Codecool.LifeOfAnts
+﻿using Codecool.LifeOfAnts.Geometry;
+using System;
+
+namespace Codecool.LifeOfAnts
 {
     /// <summary>
     ///     Position struct
@@ -25,5 +28,25 @@
         ///     Gets Y coordinate
         /// </summary>
         public int Y { get; }
+
+        public int DistanceTo(Position other)
+        {
+            return Math.Abs(X - other.X) + Math.Abs(Y - other.Y);
+        }
+
+        public static Position operator +(Position left, Position right)
+        {
+            return new Position(left.X + right.X, left.Y + right.Y);
+        }
+
+        public static Position operator -(Position left, Position right)
+        {
+            return new Position(left.X - right.X, left.Y - right.Y);
+        }
+
+        public Position NextInDirection(Direction direction)
+        {
+            return this + direction.GetNextPosInDirection();
+        }
     }
 }
