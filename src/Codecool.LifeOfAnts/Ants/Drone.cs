@@ -32,7 +32,7 @@ namespace Codecool.LifeOfAnts.Ants
                 TryMating();
             }
             else
-                MoveIntoDirection(Direction dir);
+                MoveIntoDirection(Position.GetDirectionTowardsPosition(Colony.Queen.Position));
         }
 
         private void ContinueMating(Position queenPos) 

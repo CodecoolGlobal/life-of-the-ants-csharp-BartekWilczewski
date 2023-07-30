@@ -48,5 +48,14 @@ namespace Codecool.LifeOfAnts
         {
             return this + direction.GetNextPosInDirection();
         }
+
+        public Direction GetDirectionTowardsPosition(Position other)
+        {
+            Position delta = this - other;
+
+            if(Math.Abs(delta.X) > Math.Abs(delta.Y))
+                return delta.X >= 0 ? Direction.West : Direction.East;
+            return delta.Y >= 0 ? Direction.South : Direction.North;
+        }
     }
 }
