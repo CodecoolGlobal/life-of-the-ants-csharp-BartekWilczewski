@@ -18,7 +18,7 @@ namespace Codecool.LifeOfAnts.Ants
             ResetTimer();
         }
 
-        protected override char Symbol => 'Q';
+        public override char Symbol => 'Q';
 
         public bool IsInGoodMood => _goodMoodCountdown == 0;
 

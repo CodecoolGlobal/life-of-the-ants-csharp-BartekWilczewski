@@ -10,7 +10,7 @@ namespace Codecool.LifeOfAnts.Ants
     {
         public Position Position { get; set; }
         protected readonly Colony Colony;
-        protected abstract char Symbol { get; }
+        public abstract char Symbol { get; }
 
         protected Ant(Position position, Colony colony) 
         { 

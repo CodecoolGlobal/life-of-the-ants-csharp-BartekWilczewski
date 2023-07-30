@@ -13,7 +13,7 @@ namespace Codecool.LifeOfAnts.Ants
         {
         }
 
-        protected override char Symbol => 'W';
+        public override char Symbol => 'W';
 
         public override void Act()
         {

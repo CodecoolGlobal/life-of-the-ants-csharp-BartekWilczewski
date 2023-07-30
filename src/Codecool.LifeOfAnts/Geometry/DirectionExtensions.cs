@@ -27,7 +27,7 @@ namespace Codecool.LifeOfAnts.Geometry
 
         public static Direction TurnLeft(this Direction direction)
         {
-            int index = (int)direction+3 % AllDirections.Length;
+            int index = ((int)direction+3) % AllDirections.Length;
             return AllDirections[index];
         }
     }

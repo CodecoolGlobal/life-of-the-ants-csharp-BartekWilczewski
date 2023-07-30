@@ -19,7 +19,7 @@ namespace Codecool.LifeOfAnts.Ants
             _matingCounter = 10;
         }
 
-        protected override char Symbol => 'D';
+        public override char Symbol => 'D';
 
         public override void Act()
         {

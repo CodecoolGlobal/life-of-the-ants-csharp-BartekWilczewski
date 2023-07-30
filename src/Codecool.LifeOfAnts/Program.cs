@@ -14,12 +14,13 @@ namespace Codecool.LifeOfAnts
         /// </summary>
         public static void Main()
         {
-            //stworz kolonie, dodaj mrowki
+            Colony colony = new Colony(30);
+            colony.AddAnts(10, 4, 15);
 
             do
             {
-                //colony.Update()
-                //colony.Display()
+                colony.Update();
+                colony.Display();
             }
             while (Console.ReadLine() != "q");
         }

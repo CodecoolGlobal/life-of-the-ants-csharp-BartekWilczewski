@@ -16,7 +16,7 @@ namespace Codecool.LifeOfAnts.Ants
             _lastStepDirection = DirectionExtensions.GetRandomDirection();
         }
 
-        protected override char Symbol => 'S';
+        public override char Symbol => 'S';
 
         public override void Act()
         {
